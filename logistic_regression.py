@@ -61,7 +61,7 @@ def do_experiments(start, end, step_num):
        
         # Implement: Plot the dataset
         plt.subplot(n_rows, n_cols, i)
-        plt.scatter(X[:, 0], X[:, 1], c=["red" if n == 0 else "blue" for n in y])
+        plt.scatter(X[:, 0], X[:, 1], c=["blue" if n == 0 else "red" for n in y])
         # Implement: Calculate and store logistic loss
         probs = model.predict_proba(X)
         loss_list.append(log_loss(y, probs))
